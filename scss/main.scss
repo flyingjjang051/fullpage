@@ -13,3 +13,86 @@
 #section04 {
   background-color: rgb(209, 116, 10);
 }
+#section05 {
+  background-color: rgb(126, 3, 197);
+}
+#section06 {
+  background-color: rgb(4, 196, 4);
+}
+
+// fullpage custom
+#fp-nav ul li {
+  width: 14px;
+  height: 14px;
+  margin: 30px 0;
+}
+#fp-nav ul li a {
+}
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span {
+  height: 4px;
+  width: 4px;
+  margin: -2px;
+}
+#fp-nav ul li a span {
+  height: 4px;
+  width: 4px;
+  border: 0;
+  background: #fff;
+  margin: -2px;
+  transition: all 0.1s ease-in-out;
+}
+#fp-nav ul li a:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  border: 2px solid #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  box-sizing: border-box;
+  margin: -15px;
+  transform: scale(0);
+  transition: all 0.1s ease-in-out;
+}
+#fp-nav ul li a.active:after {
+  transform: scale(1);
+}
+
+#fp-nav ul li a:before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 30px;
+  //background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#fp-nav ul li:hover a span {
+  width: 4px;
+  height: 4px;
+  margin: -2px;
+}
+#fp-nav ul li .fp-tooltip {
+  position: absolute;
+  top: -2px;
+  color: #fff;
+  font-size: 16px;
+  font-family: inherit;
+  white-space: nowrap;
+  max-width: 220px;
+  overflow: visible;
+  display: block;
+  opacity: 0.5;
+  width: auto;
+  text-transform: uppercase;
+  cursor: pointer;
+  &.fp-right {
+    right: 40px;
+  }
+}
