@@ -1,8 +1,76 @@
 @import "vars";
 @import "mixin";
 
-#section01 {
-  background-color: rgb(223, 18, 18);
+#mainVisual {
+  overflow: hidden;
+  li {
+    position: relative;
+    @for $i from 1 through 3 {
+      &#visual0#{$i} .img {
+        background-image: url("../images/main/mainVisual0#{$i}.jpg");
+      }
+    }
+    &.swiper-slide-active .img {
+      transform: scale(1);
+    }
+    .img {
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: all 5s ease 1s;
+      transform: scale(1.2);
+    }
+    .txtBox {
+      position: absolute;
+      left: 200px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      z-index: 2;
+      .main {
+        font-size: 5vw;
+        font-weight: 700;
+      }
+      .sub {
+        font-size: 24px;
+        line-height: 1.5;
+        margin: 50px 0;
+      }
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        height: 60px;
+        border: 2px solid #fff;
+        border-radius: 100px;
+        font-weight: 700;
+        text-transform: uppercase;
+        &:hover {
+          //background-color: #fff;
+          div {
+            .char {
+              //color: #111;
+              //text-shadow: 0 16px 0 #111;
+              transform: translateY(-16px);
+            }
+          }
+        }
+        div {
+          overflow: hidden;
+          text-shadow: 0 16px 0 #fff;
+          .char {
+            transition: all 0.25s ease;
+            @for $i from 1 through 10 {
+              &:nth-child(#{$i}) {
+                transition-delay: 0.02 * $i + s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 #section02 {
   background-color: rgb(2, 196, 179);
