@@ -23,9 +23,19 @@ a {
   height: 100px;
   overflow: hidden;
   transition: all 0.25s ease-in-out;
+  &.black {
+    color: #111;
+    .utilMenu ul li:before {
+      background-color: #111;
+    }
+  }
   &.on {
+    color: #fff;
     height: 420px;
     background-color: rgba(0, 0, 0, 0.5);
+    .utilMenu ul li:before {
+      background-color: #fff;
+    }
   }
   &:after {
     width: 100%;

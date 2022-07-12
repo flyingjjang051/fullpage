@@ -24,9 +24,19 @@ a {
   overflow: hidden;
   transition: all 0.25s ease-in-out;
 }
+#header.black {
+  color: #111;
+}
+#header.black .utilMenu ul li:before {
+  background-color: #111;
+}
 #header.on {
+  color: #fff;
   height: 420px;
   background-color: rgba(0, 0, 0, 0.5);
+}
+#header.on .utilMenu ul li:before {
+  background-color: #fff;
 }
 #header:after {
   width: 100%;

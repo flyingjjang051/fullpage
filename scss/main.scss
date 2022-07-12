@@ -30,6 +30,7 @@
       .main {
         font-size: 5vw;
         font-weight: 700;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
       }
       .sub {
         font-size: 24px;
@@ -46,11 +47,17 @@
         border-radius: 100px;
         font-weight: 700;
         text-transform: uppercase;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        transition: all 0.25s ease;
         &:hover {
-          //background-color: #fff;
+          background-color: rgba(255, 255, 255, 0.1);
+          transform: translateY(5px);
+          backdrop-filter: blur(10px);
+
           div {
             .char {
-              //color: #111;
+              text-shadow: 0 16px 0 #f00;
+              color: #f00;
               //text-shadow: 0 16px 0 #111;
               transform: translateY(-16px);
             }
@@ -58,8 +65,9 @@
         }
         div {
           overflow: hidden;
-          text-shadow: 0 16px 0 #fff;
+          transition: all 0.25s ease;
           .char {
+            text-shadow: 0 16px 0 #fff;
             transition: all 0.25s ease;
             @for $i from 1 through 10 {
               &:nth-child(#{$i}) {
@@ -72,8 +80,55 @@
     }
   }
 }
-#section02 {
-  background-color: rgb(2, 196, 179);
+#business {
+  position: relative;
+  overflow: hidden;
+  h2 {
+    font-size: 72px;
+    font-weight: 700;
+    position: absolute;
+    left: 50px;
+    top: 150px;
+  }
+  ul {
+    li {
+      display: flex;
+      flex-direction: row-reverse;
+      overflow: hidden;
+      height: 100vh;
+      .img {
+      }
+      .txtBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-grow: 1;
+        padding-left: 50px;
+        .num {
+          font-size: 300px;
+          font-weight: 900;
+          text-align: right;
+          width: 100%;
+          color: #ddd;
+        }
+        .title {
+          font-size: 20px;
+          color: #119891;
+        }
+        .main {
+          font-size: 48px;
+          font-weight: 500;
+          line-height: 1.5;
+          margin: 20px 0;
+        }
+        .sub {
+          font-size: 18px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
 }
 #section03 {
   background-color: rgb(0, 77, 192);
