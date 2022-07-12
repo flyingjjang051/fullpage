@@ -1,3 +1,10 @@
+.fullBody {
+  background-image: url("../images/main/value-bg01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 #mainVisual {
   overflow: hidden;
 }
@@ -106,6 +113,7 @@
 #business {
   position: relative;
   overflow: hidden;
+  background-color: #fff;
 }
 #business h2 {
   font-size: 72px;
@@ -150,8 +158,26 @@
   line-height: 1.5;
 }
 
-#section03 {
-  background-color: rgb(0, 77, 192);
+#grow {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#grow .txtBox {
+  text-align: center;
+  color: #fff;
+}
+#grow .txtBox .main {
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+#grow .txtBox .sub {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 #section04 {

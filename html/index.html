@@ -31,7 +31,7 @@
     <script src="../js/greensock/gsap.min.js"></script>
     <script src="../js/fullpage.min.js"></script>
   </head>
-  <body>
+  <body class="fullBody">
     <header id="header">
       <div class="container">
         <h1 id="logo">
@@ -228,7 +228,17 @@
           </div>
         </div>
       </section>
-      <section class="section" id="section03"></section>
+      <section class="section">
+        <div id="grow">
+          <div class="txtBox">
+            <p class="main">GROWING THE VALUE</p>
+            <p class="sub">
+              대한민국을 대표하는 고객 서비스 플랫폼 기업 <br>
+              kt cs가 만들어낸 현재, 그리고 미래
+            </p>
+          </div>
+        </div>
+      </section>
       <section class="section" id="section04"></section>
       <section class="section" id="section05"></section>
       <section class="section" id="section06"></section>
@@ -281,6 +291,11 @@
           disableOnInteraction: false,
         },
       });
+      new Swiper("#business .mask", {
+        speed: 1000,
+        loop:true,
+      });
+      
     </script>
   </body>
 </html>
