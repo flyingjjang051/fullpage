@@ -374,28 +374,61 @@
           
         </div>
       </section>
-      <section class="section">
-        <div id="ir">
-          <ul>
-            <li>
-              <h2>ESG 경영</h2>
-              <p>
-                kt cs는 경제 번영, 사회 진보, 환경 보존을 추구하며
-                기업과 사회가 공존하는 지속가능한 미래를 위해 노력하고 있습니다.
-              </p>
-            </li>
-            <li>
-              <h2>IR 자료</h2>
-              <p>
-                투명하고 정직한 기업경영을 통해 사회적 책임과
-                주주가치 극대화를 이루어 나갑니다.
-              </p>
-            </li>
-          </ul>
-        </div>        
+      <section class="section fp-auto-height">
+        <div class="inner">
+          <div id="ir">
+            <ul>
+              <li>
+                <a href="">
+                  <h2>ESG 경영</h2>
+                  <p>
+                    kt cs는 경제 번영, 사회 진보, 환경 보존을 추구하며 <br>
+                    기업과 사회가 공존하는 지속가능한 미래를 위해 노력하고 있습니다.
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <h2>IR 자료</h2>
+                  <p>
+                    투명하고 정직한 기업경영을 통해 사회적 책임과 <br>
+                    주주가치 극대화를 이루어 나갑니다.
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <footer id="footer">
+            <div class="fLogo">
+              <img src="../images/layout/logo-gray.svg" alt="">
+            </div>
+            <ul class="utilMenu">
+              <li><a href="">개인정보처리방침</a></li>
+              <li><a href="">이용약관</a></li>
+              <li><a href="">책임의 한계와 법적고지</a></li>
+              <li><a href="">이메일무단수집거부</a></li>
+              <li><a href="">상담사 칭찬하기</a></li>
+              <li><a href="">고객의 소리</a></li>
+              <li><a href="">안전신문고</a></li>
+              <li><a href="">윤리위반신고</a></li>
+            </ul>
+            <address>
+              <div>
+                <span>(주)케이티씨에스</span> 
+                <span>대표자 박경원</span> 
+                <span>개인정보보호책임자 정인용</span>
+              </div>
+              <div>
+                <span>대전 서구 갈마로 160(괴정동) KT인재개발원</span>
+                <span>사업자등록번호 314-81-42683</span> 
+                <span>대표번호 042-604-5127</span>
+              </div>
+              <div class="copyright">ⓒ kt cs Corporation. All Rights reserved.</div>
+            </address>
+          </footer>
+        </div>
       </section>
     </main>
-    <footer></footer>
 
     <script>
       Splitting();
@@ -465,11 +498,7 @@
         scrollingSpeed: 700,
         //scrollBar: true,
         afterLoad (origin, destination, direction, trigger) {
-          if(destination.index===1 || destination.index===3 || destination.index===4) {
-            $("#header").addClass("black");
-          } else {
-            $("#header").removeClass("black");
-          }
+          
           if(destination.index===2) {
             businessTL.restart();
           } else {
@@ -490,6 +519,11 @@
           
         },
         onLeave(origin,destination,direction,trigger) {
+          if(destination.index===1 || destination.index===4 || destination.index===5) {
+            $("#header").addClass("black");
+          } else {
+            $("#header").removeClass("black");
+          }
           if(destination.index===3) {
             $("#fp-nav").addClass("disable")
           } else {

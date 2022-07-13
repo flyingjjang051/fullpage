@@ -140,25 +140,18 @@ a {
 }
 
 #footer {
-  color: #ccc;
-  background-color: #333;
+  padding: 50px;
 }
 #footer .utilMenu {
-  border-bottom: 1px solid #666;
-}
-#footer .utilMenu ul {
   display: flex;
-  justify-content: center;
+  margin: 50px 0;
 }
-#footer .utilMenu ul li:nth-child(1) a:before {
-  display: none;
-}
-#footer .utilMenu ul li a {
+#footer .utilMenu li a {
   display: block;
   position: relative;
   padding: 20px 30px;
 }
-#footer .utilMenu ul li a:before {
+#footer .utilMenu li a:before {
   width: 1px;
   height: 14px;
   top: 50%;
@@ -169,31 +162,20 @@ a {
   position: absolute;
   content: "";
 }
-#footer .addressBox {
-  padding: 50px 0;
+#footer .utilMenu li:nth-child(1) a {
+  padding-left: 0;
 }
-#footer .addressBox .container {
-  display: flex;
+#footer .utilMenu li:nth-child(1) a:before {
+  display: none;
 }
-#footer .addressBox .container .address {
-  margin-left: 50px;
+#footer address {
+  line-height: 1.5;
 }
-#footer .addressBox .container .address .info {
-  margin: 10px 0 30px;
-}
-#footer .addressBox .container .address .info span {
+#footer address span {
   margin-right: 20px;
 }
-#footer .addressBox .container .address .copyright {
-  color: #666;
-}
-#footer .addressBox .container .tel {
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-}
-#footer .addressBox .container .tel strong {
-  margin-top: 10px;
-  font-size: 38.4px;
-  letter-spacing: -0.02em;
+#footer address .copyright {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #999;
 }
