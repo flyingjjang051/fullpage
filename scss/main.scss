@@ -173,6 +173,22 @@
 #info {
   ul {
     display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease;
+    &.bg01 {
+      background-image: url("../images/main/value-info-bg01.jpg");
+    }
+    &.bg02 {
+      background-image: url("../images/main/value-info-bg02.jpg");
+    }
+    &.bg03 {
+      background-image: url("../images/main/value-info-bg03.jpg");
+    }
+    &.bg04 {
+      background-image: url("../images/main/value-info-bg04.jpg");
+    }
+
     li {
       height: 100vh;
       width: 25%;
@@ -223,8 +239,46 @@
     }
   }
 }
-#section05 {
-  background-color: rgb(126, 3, 197);
+#news {
+  display: flex;
+  height: 100vh;
+  background-color: #fff;
+  align-items: center;
+  .titleBox {
+    padding-left: 50px;
+    width: 35%;
+    h2 {
+      font-size: 72px;
+      font-weight: 700;
+      img {
+        height: 60px;
+      }
+    }
+  }
+  .mask {
+    width: 65%;
+    li {
+      width: 430px;
+      img {
+        width: 100%;
+      }
+      .txtBox {
+        margin-top: 20px;
+        .category {
+          color: #119891;
+        }
+        .title {
+          font-size: 20px;
+          font-weight: 500;
+          margin: 10px 0 20px;
+        }
+        .date {
+          font-size: 18px;
+          color: #999;
+        }
+      }
+    }
+  }
 }
 #section06 {
   background-color: rgb(4, 196, 4);
@@ -305,4 +359,7 @@
   &.fp-right {
     right: 40px;
   }
+}
+#fp-nav.disable ul li .fp-tooltip {
+  display: none !important;
 }
