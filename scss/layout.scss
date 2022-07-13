@@ -36,6 +36,9 @@ a {
     .utilMenu ul li:before {
       background-color: #fff;
     }
+    &:after {
+      display: block;
+    }
   }
   &:after {
     width: 100%;
@@ -44,6 +47,7 @@ a {
     background-color: #fff;
     pointer-events: none;
     @include pseudo;
+    display: none;
   }
   .container {
     display: flex;

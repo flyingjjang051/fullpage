@@ -202,6 +202,17 @@
   align-items: center;
   color: #fff;
   text-align: center;
+  transition: all 0.25s ease;
+}
+#info ul li:hover {
+  background-color: #f00;
+}
+#info ul li:hover .title {
+  color: #fff;
+}
+#info ul li div {
+  opacity: 0;
+  transform: translateY(100px);
 }
 #info ul li .title {
   font-size: 20px;

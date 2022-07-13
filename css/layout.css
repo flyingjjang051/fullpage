@@ -38,6 +38,9 @@ a {
 #header.on .utilMenu ul li:before {
   background-color: #fff;
 }
+#header.on:after {
+  display: block;
+}
 #header:after {
   width: 100%;
   height: 1px;
@@ -47,6 +50,7 @@ a {
   display: block;
   position: absolute;
   content: "";
+  display: none;
 }
 #header .container {
   display: flex;
