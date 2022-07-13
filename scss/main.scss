@@ -250,6 +250,9 @@
     h2 {
       font-size: 72px;
       font-weight: 700;
+      .char {
+        opacity: 0;
+      }
       img {
         height: 60px;
       }
@@ -257,8 +260,10 @@
   }
   .mask {
     width: 65%;
+    overflow: hidden;
     li {
       width: 430px;
+      opacity: 0;
       img {
         width: 100%;
       }

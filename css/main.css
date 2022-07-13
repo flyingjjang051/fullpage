@@ -271,14 +271,19 @@
   font-size: 72px;
   font-weight: 700;
 }
+#news .titleBox h2 .char {
+  opacity: 0;
+}
 #news .titleBox h2 img {
   height: 60px;
 }
 #news .mask {
   width: 65%;
+  overflow: hidden;
 }
 #news .mask li {
   width: 430px;
+  opacity: 0;
 }
 #news .mask li img {
   width: 100%;
