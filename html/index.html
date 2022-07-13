@@ -110,7 +110,7 @@
               <div class="txtBox">
                 <p class="main">MAKE YOUR <br />LIFE BETTER</p>
                 <p class="sub">고객서비스와 AI기술의 융합으로<br />더 나은 미래를 만들겠습니다.</p>
-                <a href=""><div>view more</div></a>
+                <a href="" class="more"><div>view more</div></a>
               </div>
               <div class="img"></div>
             </li>
@@ -118,7 +118,7 @@
               <div class="txtBox">
                 <p class="main">ALWAYS<br />FOCUS ON</p>
                 <p class="sub">고객 만족 실현을 최우선 가치로 끊임없이 노력하는<br />든든한 동반자가 되겠습니다.</p>
-                <a href=""><div>view more</div></a>
+                <a href="" class="more"><div>view more</div></a>
               </div>
               <div class="img"></div>
             </li>
@@ -126,7 +126,7 @@
               <div class="txtBox">
                 <p class="main">HAPPY SOCIETY<br />TOGETHER</p>
                 <p class="sub">우리의 행동 하나 하나가 모여<br />우리 사회의 지속적인 행복을 이루어 나갑니다.</p>
-                <a href=""><div>view more</div></a>
+                <a href="" class="more"><div>view more</div></a>
               </div>
               <div class="img"></div>
             </li>
@@ -293,7 +293,7 @@
               새소식을 <br>
               전해드립니다
             </h2>
-            <a href="">view more</a>
+            <a href="" class="more"><div>view more</div></a>
           </div>
           <div class="mask">
             <ul class="swiper-wrapper">
@@ -374,7 +374,26 @@
           
         </div>
       </section>
-      <section class="section" id="section06"></section>
+      <section class="section">
+        <div id="ir">
+          <ul>
+            <li>
+              <h2>ESG 경영</h2>
+              <p>
+                kt cs는 경제 번영, 사회 진보, 환경 보존을 추구하며
+                기업과 사회가 공존하는 지속가능한 미래를 위해 노력하고 있습니다.
+              </p>
+            </li>
+            <li>
+              <h2>IR 자료</h2>
+              <p>
+                투명하고 정직한 기업경영을 통해 사회적 책임과
+                주주가치 극대화를 이루어 나갑니다.
+              </p>
+            </li>
+          </ul>
+        </div>        
+      </section>
     </main>
     <footer></footer>
 
@@ -385,10 +404,9 @@
       const infoTL = gsap.timeline({paused:true});
       const newsTL = gsap.timeline({paused:true});
       let newsSwiper=null;
-      $("#mainVisual li").each(function(i,item){
-        const btn = $(item).find("a");
-        const div = btn.find("div");
-        const txt = div.text().split("");
+      $(".more").each(function(i,item){
+        const div = $(this).find("div");
+        const txt = div.text().split("");//["v","i","e","w"," ","m","o","r","e"]
         div.html("");
         $.each(txt,function(j,item02){
           if(item02===" ") {
@@ -397,7 +415,7 @@
           div.html(div.html()+`<span class="char">${item02}</span>`);
           }
         })
-      })
+      });
       
       $("#gnb > .list > li").on("mouseenter", function () {
         header.addClass("on");

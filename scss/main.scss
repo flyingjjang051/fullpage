@@ -7,6 +7,59 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+.more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    backdrop-filter: blur(10px);
+
+    div {
+      .char {
+        //text-shadow: 0 24px 0 #111;
+        //color: #111;
+        //text-shadow: 0 16px 0 #111;
+        transform: translateY(-20px);
+      }
+    }
+  }
+  div {
+    overflow: hidden;
+    transition: all 0.25s ease;
+    .char {
+      text-shadow: 0 20px 0 #fff;
+      transition: all 0.25s ease;
+      display: inline-block;
+      &.whitespace {
+        margin: 0 2px;
+      }
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.04 * $i + s;
+        }
+      }
+    }
+  }
+}
+
+#news .more {
+  background-color: #111;
+  color: #fff;
+  margin-top: 50px;
+  border: none;
+}
+
 #mainVisual {
   overflow: hidden;
   li {
@@ -42,50 +95,6 @@
         font-size: 24px;
         line-height: 1.5;
         margin: 50px 0;
-      }
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 180px;
-        height: 60px;
-        border: 2px solid #fff;
-        border-radius: 100px;
-        font-weight: 700;
-        text-transform: uppercase;
-        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-        transition: all 0.25s ease;
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-          transform: translateY(-3px);
-          backdrop-filter: blur(10px);
-
-          div {
-            .char {
-              //text-shadow: 0 24px 0 #111;
-              //color: #111;
-              //text-shadow: 0 16px 0 #111;
-              transform: translateY(-20px);
-            }
-          }
-        }
-        div {
-          overflow: hidden;
-          transition: all 0.25s ease;
-          .char {
-            text-shadow: 0 20px 0 #fff;
-            transition: all 0.25s ease;
-            display: inline-block;
-            &.whitespace {
-              margin: 0 2px;
-            }
-            @for $i from 1 through 10 {
-              &:nth-child(#{$i}) {
-                transition-delay: 0.04 * $i + s;
-              }
-            }
-          }
-        }
       }
     }
   }
